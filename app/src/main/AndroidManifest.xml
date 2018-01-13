@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mariaaparecida.planosaudechb">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity android:name=".Individual">
+        </activity>
+
+        <activity android:name=".Laboratorial">
+        </activity>
+
+        <activity android:name=".Variasempresas">
+        </activity>
+
+        <activity android:name=".Empresa">
+        </activity>
+
+        <activity android:name=".Empresaplus">
+        </activity>
+
+        <activity android:name=".Adesao">
+        </activity>
+
+        <activity android:name=".Adesaoaffix">
+        </activity>
+
+        <activity android:name=".AdesaoAlcare">
+        </activity>
+
+        <activity android:name=".AdesaoQualicorp">
+        </activity>
+        <activity android:name=".Odontologico">
+        </activity>
+        <activity android:name=".Tabelagrid">
+        </activity>
+
+        <activity android:name=".ProdutoVitallisind">
+        </activity>
+        <activity android:name=".ProdutoGood">
+        </activity>
+        <activity android:name=".ProdutoUnimedInd">
+        </activity>
+        <activity android:name=".ProdutoAmbulatorialPremium">
+        </activity>
+        <activity android:name=".ProdutoBemBeneficios">
+        </activity>
+    </application>
+
+</manifest>
