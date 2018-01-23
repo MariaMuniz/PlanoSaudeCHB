@@ -24,36 +24,40 @@
 
         <activity android:name=".Individual">
         </activity>
-
         <activity android:name=".Laboratorial">
         </activity>
-
         <activity android:name=".Variasempresas">
         </activity>
-
         <activity android:name=".Empresa">
         </activity>
-
         <activity android:name=".Empresaplus">
-        </activity>
-
-        <activity android:name=".Adesao">
-        </activity>
-
-        <activity android:name=".Adesaoaffix">
-        </activity>
-
-        <activity android:name=".AdesaoAlcare">
-        </activity>
-
-        <activity android:name=".AdesaoQualicorp">
         </activity>
         <activity android:name=".Odontologico">
         </activity>
         <activity android:name=".Tabelagrid">
         </activity>
 
+        <activity android:name=".Adesao">
+        </activity>
+        <activity android:name=".AdesaoBemBeneficios">
+        </activity>
+        <activity android:name=".Adesaoaffix">
+        </activity>
+        <activity android:name=".AdesaoAlcare">
+        </activity>
+        <activity android:name=".AdesaoQualicorp">
+        </activity>
+
+
+        <activity android:name=".ProdutogoodlifeEmpresa">
+        </activity>
         <activity android:name=".ProdutoVitallisind">
+        </activity>
+        <activity android:name=".ProdutoSampAffix">
+        </activity>
+        <activity android:name=".ProdutoVivamedAffix">
+        </activity>
+        <activity android:name=".ProdutoSaudeSistemaAffix">
         </activity>
         <activity android:name=".ProdutoGood">
         </activity>
@@ -62,6 +66,62 @@
         <activity android:name=".ProdutoAmbulatorialPremium">
         </activity>
         <activity android:name=".ProdutoBemBeneficios">
+        </activity>
+        <activity android:name=".ProdutoUnimedEmpresaPlus">
+        </activity>
+        <activity android:name=".ProdutoPromedEmprsaPlus">
+        </activity>
+        <activity android:name=".ProdutoSaudeSistemaEmpresaPlus">
+        </activity>
+        <activity android:name=".ProdutoOneHealthEmpresaPlus">
+        </activity>
+        <activity android:name=".ProdutoAmilEmpresaplus">
+        </activity>
+
+        <activity android:name=".ProdutoPromedEmpresa">
+        </activity>
+        <activity android:name=".ProdutoSaudeSistemaEmpresa">
+        </activity>
+        <activity android:name=".ProdutoOnehealtEmpresas">
+        </activity>
+        <activity android:name=".ProdutoSampEmpresas">
+        </activity>
+        <activity android:name=".ProdutoUnimedEmpresas">
+        </activity>
+        <activity android:name=".ProdutoVitallisEmpresa">
+        </activity>
+        <activity android:name=".ProdutosAmil">
+        </activity>
+
+        <activity android:name=".ProdutoSampAlcare">
+        </activity>
+        <activity android:name=".ProdutoBradescoAlcare">
+        </activity>
+        <activity android:name=".ProdutoVitallisAlcare">
+        </activity>
+        <activity android:name=".ProdutoVivamedAlcare">
+
+        </activity>
+        <activity android:name=".ProdutoQualicorpAmilPremium">
+        </activity>
+        <activity android:name=".ProdutoQualicorpAmilSupremo">
+        </activity>
+        <activity android:name=".ProdutoQualicorpBradescoSupremo">
+        </activity>
+        <activity android:name=".ProdutoqualicorpBradescoPremium">
+        </activity>
+        <activity android:name=".ProdutoQualicorpCaixaCompulsoria">
+        </activity>
+        <activity android:name=".ProdutoQualicorpCaixaVoluntario">
+        </activity>
+        <activity android:name=".ProdutoQualicorpSulamericaPremium">
+        </activity>
+        <activity android:name=".ProdutoQualicorpSulamericaSupremo">
+        </activity>
+        <activity android:name=".Totalsimulado">
+        </activity>
+
+        <activity android:name=".SplashActivity">
         </activity>
     </application>
 

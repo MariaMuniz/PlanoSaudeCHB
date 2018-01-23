@@ -2,71 +2,87 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:weightSum="20"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
-
     <RelativeLayout
-        android:layout_weight="2"
+        android:layout_weight="4"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         >
         <TextView
-            android:id="@+id/textGri"
+            android:id="@+id/textGrid"
             android:text="Escolha um produto"
             android:textSize="34sp"
             android:textColor="@android:color/holo_blue_dark"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
-
     </RelativeLayout>
 
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         >
         <TextView
-            android:id="@+id/textApt"
-            android:text="Apartamento"
-            android:textSize="25sp"
-            android:textColor="@android:color/black"
-            android:layout_centerInParent="true"
+            android:id="@+id/textAcomod"
+            android:text="Acomodação:"
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_blue_dark"
             android:layout_width="wrap_content"
-            android:layout_marginLeft="36dp"
-            android:layout_marginRight="36dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            />
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
 
-        <TextView
-            android:id="@+id/textEnf"
-            android:text="Enfermaria"
-            android:textSize="25sp"
-            android:textColor="@android:color/black"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
 
-    </LinearLayout>
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/radio_pirates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark"
+                android:text="Apartamento"
+                android:buttonTint="@android:color/holo_blue_dark"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_ninjas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enfermaria"
+                android:buttonTint="@android:color/holo_blue_dark"
+                android:textColor="@android:color/holo_blue_dark"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+    </RelativeLayout>
+
 
 
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9.78"
+        android:layout_weight="7.29"
         android:alignmentMode="alignMargins"
         android:columnCount="2"
         android:columnOrderPreserved="false"
         android:padding="14dp"
-        android:rowCount="10">
+        android:rowCount="8">
 
 
-        <!--column1 apt
+        <!--column1 individ -->
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -89,19 +105,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Apartamento"
+                    android:text="Saúde Multi"
+                    android:clickable="true"
+                    android:onClick="chamaBemBeneficiosSaudeMulti"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/holo_blue_dark"
                     android:textSize="18sp"
 
                     />
             </LinearLayout>
 
 
-            >
+
         </android.support.v7.widget.CardView>
-        -column2 enfremaria-->
-        <!--
+        <!--column2 individ -->
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -124,310 +141,18 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Enfermaria"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-
-                    />
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-    -->
-
-        <!--column3 -->
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Saúde Multi I"
-                    android:onClick="chamaSaudeMultiIapt"
                     android:clickable="true"
+                    android:onClick="chamaBemBeneficiosConsaude"
+                    android:text="Consaúde"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/holo_blue_dark"
                     android:textSize="18sp"
 
                     />
             </LinearLayout>
-
-
-            >
-        </android.support.v7.widget.CardView>
-        <!--column4 individ -->
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Saúde Multi I"
-                    android:onClick="chamaSaudeMultiIenf"
-                    android:clickable="true"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-
-                    />
-            </LinearLayout>
-
-
-            >
-        </android.support.v7.widget.CardView>
-        <!--column5 individ -->
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Saúde Multi II"
-                    android:onClick="chamaSaudeMultiIIapt"
-                    android:clickable="true"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-
-                    />
-            </LinearLayout>
-
-
-            >
-        </android.support.v7.widget.CardView>
-        <!--column6 individ -->
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Saúde Multi II"
-                    android:onClick="chamaSaudeMultiIIenf"
-                    android:clickable="true"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-
-                    />
-            </LinearLayout>
-
-
-            >
-        </android.support.v7.widget.CardView>
-
-        <!--column7 individ -->
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Consaúde I"
-                    android:onClick="chamaConsaudeIapt"
-                    android:clickable="true"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-
-                    />
-            </LinearLayout>
-
-
-            >
-        </android.support.v7.widget.CardView>
-        <!--column8 individ -->
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Consaúde I"
-                    android:onClick="chamaConsaudeIenf"
-                    android:clickable="true"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-
-                    />
-            </LinearLayout>
-
-
-            >
-        </android.support.v7.widget.CardView>
-        <!--column7 individ -->
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Consaúde II"
-                    android:onClick="chamaConsaudeIIapt"
-                    android:clickable="true"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-
-                    />
-            </LinearLayout>
-
-
-            >
-        </android.support.v7.widget.CardView>
-        <!--column8 individ -->
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Consaúde II"
-                    android:onClick="chamaConsaudeIIenf"
-                    android:clickable="true"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-
-                    />
-            </LinearLayout>
-
-
-            >
         </android.support.v7.widget.CardView>
 
 
     </GridLayout>
-
-
 
 </LinearLayout>

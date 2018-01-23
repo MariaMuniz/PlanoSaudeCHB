@@ -2,12 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:weightSum="14"
+    android:weightSum="15"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
+
     <RelativeLayout
-        android:layout_weight="2"
+        android:layout_weight="3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         >
@@ -19,15 +22,110 @@
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        >
+        <TextView
+            android:id="@+id/textAcomod"
+            android:text="Acomodação:"
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/radio_pirates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark"
+                android:text="Apartamento"
+                android:buttonTint="@android:color/holo_blue_dark"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_ninjas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enfermaria"
+                android:buttonTint="@android:color/holo_blue_dark"
+                android:textColor="@android:color/holo_blue_dark"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_marginLeft="35dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        >
+        <TextView
+            android:id="@+id/textAcomo"
+            android:text="Cooparticipação:"
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+
+        >
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
 
 
+            android:orientation="vertical">
+
+            <RadioButton android:id="@+id/coper"
+                android:layout_width="wrap_content"
+                android:buttonTint="@android:color/holo_blue_dark"
+                android:layout_height="wrap_content"
+                android:text="Com cooparticipação"
+                android:textColor="@android:color/holo_blue_dark"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/semcoper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sem coorparticipação"
+                android:buttonTint="@android:color/holo_blue_dark"
+                android:textColor="@android:color/holo_blue_dark"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
     </RelativeLayout>
 
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="6.33"
+        android:layout_weight="8.40"
         android:alignmentMode="alignMargins"
         android:columnCount="2"
         android:columnOrderPreserved="false"
@@ -58,9 +156,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Apartamento"
+                    android:text="Ouro"
+                    android:clickable="true"
+                    android:onClick="chamaOuroGood"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/holo_blue_dark"
                     android:textSize="18sp"
 
                     />
@@ -69,7 +169,7 @@
 
             >
         </android.support.v7.widget.CardView>
-        <!--column2 enfremaria-->
+        <!--column2 individ -->
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -92,9 +192,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Enfermaria"
+                    android:clickable="true"
+                    android:onClick="chamaPrataGood"
+                    android:text="Prata"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/holo_blue_dark"
                     android:textSize="18sp"
 
                     />
@@ -103,7 +205,7 @@
 
             >
         </android.support.v7.widget.CardView>
-        <!--column3 Apt-->
+        <!--column3 individ -->
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -126,11 +228,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ouro"
-                    android:onClick="chamaOuroGood"
                     android:clickable="true"
+                    android:onClick="chamaPlatinaGood"
+                    android:text="Platina"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/holo_blue_dark"
                     android:textSize="18sp"
 
                     />
@@ -162,84 +264,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Prata"
-                    android:onClick="chamaPrataGood"
                     android:clickable="true"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-
-                    />
-            </LinearLayout>
-
-
-            >
-        </android.support.v7.widget.CardView>
-        <!--column5 individ -->
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Platina"
-                    android:onClick="chamaPlatinaGood"
-                    android:clickable="true"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-
-                    />
-            </LinearLayout>
-
-
-            >
-        </android.support.v7.widget.CardView>
-
-        <!--column6 individ -->
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bronze"
                     android:onClick="chamaBronzeGood"
-                    android:clickable="true"
+                    android:text="Bronze"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/holo_blue_dark"
                     android:textSize="18sp"
 
                     />

@@ -56,6 +56,7 @@
 
                 <ImageView
                     android:src="@drawable/amilpre"
+                    android:onClick="chamaAmilPremiumQualicorp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -88,6 +89,7 @@
 
                 <ImageView
                     android:src="@drawable/amilsup"
+                    android:onClick="chamaAmilSupremoQualicorp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -119,6 +121,7 @@
 
                 <ImageView
                     android:src="@drawable/bradescosegurospre"
+                    android:onClick="chamaBradescoPremiumQualicorp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -150,6 +153,7 @@
 
                 <ImageView
                     android:src="@drawable/bradescosegurossupre"
+                    android:onClick="chamaBradescoSupremoQualicorp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -181,6 +185,7 @@
 
                 <ImageView
                     android:src="@drawable/caixacomp"
+                    android:onClick="chamaCaixaCompulsorioQualicorp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -212,6 +217,7 @@
 
                 <ImageView
                     android:src="@drawable/caixavol"
+                    android:onClick="chamaCaixaVoluntarioQualicorp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -243,6 +249,7 @@
 
                 <ImageView
                     android:src="@drawable/sulamericaprem"
+                    android:onClick="chamaSulamericaPremiumQualicorp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -273,6 +280,7 @@
 
                 <ImageView
                     android:src="@drawable/sulamericasupre"
+                    android:onClick="chamaSulamericaSupremoQualicorp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />

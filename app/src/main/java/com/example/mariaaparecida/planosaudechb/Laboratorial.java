@@ -21,4 +21,9 @@ public class Laboratorial extends Activity {
         Intent it = new Intent(Laboratorial.this, ProdutoAmbulatorialPremium.class);
         startActivity(it);
     }
+
+    public void chamaGoodlifeAmb(View v) {
+        Intent it = new Intent(Laboratorial.this, ProdutoAmbulatorialGood.class);
+        startActivity(it);
+    }
 }

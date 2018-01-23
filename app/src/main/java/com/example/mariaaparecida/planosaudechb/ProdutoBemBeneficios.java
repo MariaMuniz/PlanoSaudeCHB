@@ -19,7 +19,11 @@ public class ProdutoBemBeneficios extends Activity {
         setContentView(R.layout.produtobembeneficios);
     }
 
-    public void chamaProdutoBemBeneficios(View v) {
+    public void chamaBemBeneficiosSaudeMulti(View v) {
+        Intent it = new Intent(ProdutoBemBeneficios.this, Tabelagrid.class);
+        startActivity(it);
+    }
+    public void chamaBemBeneficiosConsaude(View v) {
         Intent it = new Intent(ProdutoBemBeneficios.this, Tabelagrid.class);
         startActivity(it);
     }

@@ -56,6 +56,7 @@
 
                 <ImageView
                     android:src="@drawable/saudesistema"
+                    android:onClick="chamaProdutoSaudeSistemaAffix"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -89,6 +90,7 @@
 
                 <ImageView
                     android:src="@drawable/samp"
+                    android:onClick="chamaProdutSampAffix"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -120,6 +122,7 @@
 
                 <ImageView
                     android:src="@drawable/vivamed"
+                    android:onClick="chamaProdutoVivamedAffix"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />

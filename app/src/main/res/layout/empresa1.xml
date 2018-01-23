@@ -55,6 +55,7 @@
 
                 <ImageView
                     android:src="@drawable/amil"
+                    android:onClick="chamaAmilEmpresa"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -88,6 +89,7 @@
 
                 <ImageView
                     android:src="@drawable/goodlife"
+                    android:onClick="chamaGoodlifeEmpresa"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -125,6 +127,7 @@
 
                 <ImageView
                     android:src="@drawable/onehealth"
+                    android:onClick="chamaOneHealtEmpresa"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -162,18 +165,12 @@
 
                 <ImageView
                     android:src="@drawable/promed"
+                    android:onClick="chamaPromedEmpresa"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
 
-
-
-
-
-
             </LinearLayout>
-
-
 
 
             ></android.support.v7.widget.CardView>
@@ -199,6 +196,7 @@
 
                 <ImageView
                     android:src="@drawable/samp"
+                    android:onClick="chamaSampEmpresa"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -237,6 +235,7 @@
 
                 <ImageView
                     android:src="@drawable/saudesistema"
+                    android:onClick="chamaSaudeSistemaEmpresa"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -274,6 +273,7 @@
 
                 <ImageView
                     android:src="@drawable/unimed"
+                    android:onClick="chamaUnimedEmpresa"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -313,6 +313,7 @@
                 <ImageView
 
                     android:src="@drawable/vitallis"
+                    android:onClick="chamaVitalisEmpresa"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />

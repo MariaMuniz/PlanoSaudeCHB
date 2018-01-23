@@ -2,31 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:weightSum="33"
+    android:weightSum="40"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:layout_alignParentBottom="true">
-
-
-        <ImageButton
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:onClick="Chamaresultado"
-            android:layout_height="wrap_content"
-            android:src="@drawable/proximo"
-            />
-
-    </RelativeLayout>
-
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="494dp"
         android:alignmentMode="alignMargins"
         android:columnCount="4"
         android:columnOrderPreserved="false"
@@ -38,7 +21,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-
             android:layout_rowWeight="1"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
@@ -1286,5 +1268,30 @@
 
     </GridLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="54dp"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true">
 
+
+            <ImageButton
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:onClick="Chamaresultado"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ceta"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="25dp" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
 </LinearLayout>

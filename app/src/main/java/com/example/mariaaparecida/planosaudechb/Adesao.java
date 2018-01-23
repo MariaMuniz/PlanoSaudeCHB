@@ -34,6 +34,9 @@ public class Adesao extends Activity {
         startActivity(it);
     }
 
-
+    public void chamaAdesaoBemBeneficios(View v) {
+        Intent it = new Intent(Adesao.this, AdesaoBemBeneficios.class);
+        startActivity(it);
+    }
 
 }
