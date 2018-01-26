@@ -1,6 +1,7 @@
 package com.example.mariaaparecida.planosaudechb;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -13,16 +14,37 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.List;
+
+import Dao.DAOBasico;
+import Dao.FaixaetariaDAO;
+import Dao.HasRedeCredenciadaDAO;
+import Dao.IdadesDAO;
+import Dao.OperadoraDAO;
+import Dao.PlanoDAO;
+import Dao.PrecoDAO;
+import Dao.ProdutoDAO;
+import Dao.RedecredenciadaDAO;
+import Entidades.Faixaetaria;
+import Entidades.HasRedeCredenciada;
+import Entidades.Idades;
+import Entidades.Operadora;
+import Entidades.Plano;
+import Entidades.Preco;
+import Entidades.Produto;
+import Entidades.RedeCredenciada;
 
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static ProgressDialog progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -159,7 +181,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void openWhatsApp(View v) {
-        String smsNumber = "553198680271"; //without '+'
+        /*String smsNumber = "553198680271"; //without '+'
         try {
             Intent sendIntent = new Intent("android.intent.action.MAIN");
             //sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));
@@ -171,7 +193,85 @@ public class MainActivity extends AppCompatActivity
             startActivity(sendIntent);
         } catch (Exception e) {
             Toast.makeText(this, "Error/n" + e.toString(), Toast.LENGTH_SHORT).show();
+        }*/
+
+
+        limparTudo();
+        download();
+    }
+
+
+
+    public void limparTudo()
+    {
+        deleteDao(new PlanoDAO(this));
+        deleteDao(new ProdutoDAO(this));
+        deleteDao(new OperadoraDAO(this));
+        deleteDao(new PrecoDAO(this));
+        deleteDao(new IdadesDAO(this));
+        deleteDao(new FaixaetariaDAO(this));
+        deleteDao(new RedecredenciadaDAO(this));
+        deleteDao(new HasRedeCredenciadaDAO(this));
+    }
+    public void deleteDao(DAOBasico dao)
+    {
+        try{
+            dao.deletarTodos();
+            dao.fecharConexao();
+        }catch (Exception ex)
+        {
+            Log.d("log_tag_ex","Exception: "+ex.getMessage());
         }
+    }
+    public void download()
+    {
+        progress = ProgressDialog.show(this, "Download",
+                "aguarde..", true);
+        Log.d("log_tag", "Icon download touch ");
+        DownloadTask dlTask = new DownloadTask(this);
+        dlTask.execute();
+    }
+    public void recuperar() {
+        DAOBasico dao = new PlanoDAO(this);
+        List<Plano> planos = dao.recuperarTodos();
+        dao.fecharConexao();
+
+        dao = new OperadoraDAO(this);
+        List<Operadora> operadoras = dao.recuperarTodos();
+        dao.fecharConexao();
+
+        dao = new ProdutoDAO(this);
+        List<Produto> produtos = dao.recuperarTodos();
+        dao.fecharConexao();
+
+        dao = new PrecoDAO(this);
+        List<Preco> precos = dao.recuperarTodos();
+        dao.fecharConexao();
+
+        dao = new IdadesDAO(this);
+        List<Idades> idades = dao.recuperarTodos();
+        dao.fecharConexao();
+
+        dao = new FaixaetariaDAO(this);
+        List<Faixaetaria> faixas = dao.recuperarTodos();
+        dao.fecharConexao();
+
+        dao = new RedecredenciadaDAO(this);
+        List<RedeCredenciada> redeCredenciadas = dao.recuperarTodos();
+        dao.fecharConexao();
+
+        dao = new HasRedeCredenciadaDAO(this);
+        List<HasRedeCredenciada> hasRedeCredenciadas= dao.recuperarTodos();
+        dao.fecharConexao();
+
+        for(RedeCredenciada r:redeCredenciadas)
+        {
+            Log.d("log_tag","R = "+r.getNome_rede());
+        }
+
+
+
+
     }
 
 }
