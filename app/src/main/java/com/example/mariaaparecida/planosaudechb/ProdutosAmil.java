@@ -7,6 +7,8 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.RadioButton;
 
+import Entidades.Singleton;
+
 /**
  * Created by Maria Aparecida on 13/01/2018.
  */
@@ -25,13 +27,13 @@ public class ProdutosAmil extends Activity {
         switch(view.getId()) {
             case R.id.apt:
                 if (checked){
-                    acomodacao = "apartamento";
+                    Singleton.getInstance().setAcomodacao("Apartamento");
                 }
 
                     break;
             case R.id.enf:
                 if (checked){
-                    acomodacao = "enfermaria";
+                    Singleton.getInstance().setAcomodacao("Enfermaria");;
                 }
 
                     break;
@@ -43,17 +45,17 @@ public class ProdutosAmil extends Activity {
         boolean checked = ((RadioButton) view).isChecked();
         switch(view.getId()) {
             case R.id.coper:
-                if (checked){
+                if (checked) {
+                    Singleton.getInstance().setCooparticipacao(true);
 
                 }
 
-                    break;
+                break;
             case R.id.semcoper:
-                if (checked){
-
+                if (checked) {
+                    Singleton.getInstance().setCooparticipacao(false);
                 }
-
-                    break;
+                break;
         }
     }
 
