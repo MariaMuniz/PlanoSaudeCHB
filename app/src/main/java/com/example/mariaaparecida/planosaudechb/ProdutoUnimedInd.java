@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.Toast;
+
+import Entidades.Singleton;
 
 /**
  * Created by Maria Aparecida on 09/01/2018.
@@ -20,31 +23,22 @@ public class ProdutoUnimedInd extends Activity {
     }
 
 
-    public void chamaPlenoUnimedenf(View v) {
-        Intent it = new Intent(ProdutoUnimedInd.this, Tabelagrid.class);
-        startActivity(it);
-    }
-    public void chamaPlenoUnimedapt(View v) {
-        Intent it = new Intent(ProdutoUnimedInd.this, Tabelagrid.class);
-        startActivity(it);
-    }
-
-    public void chamaUnipartapt(View v) {
+    public void chamaPleno(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,284,285);
         Intent it = new Intent(ProdutoUnimedInd.this, Tabelagrid.class);
         startActivity(it);
     }
 
+    public void chamaUnipartFlex30(View v) {
 
-    public void chamaUnipartenf(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,286,287);
+
         Intent it = new Intent(ProdutoUnimedInd.this, Tabelagrid.class);
         startActivity(it);
     }
 
-    public void chamaUnipart50enf(View v) {
-        Intent it = new Intent(ProdutoUnimedInd.this, Tabelagrid.class);
-        startActivity(it);
-    }
-    public void chamaUnipart50apt(View v) {
+    public void chamaUnipartFlex50(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,288,289);
         Intent it = new Intent(ProdutoUnimedInd.this, Tabelagrid.class);
         startActivity(it);
     }

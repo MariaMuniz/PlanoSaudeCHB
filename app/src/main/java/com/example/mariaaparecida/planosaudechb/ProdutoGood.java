@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import Entidades.Singleton;
+
 /**
  * Created by Maria Aparecida on 09/01/2018.
  */
@@ -23,18 +25,22 @@ public class ProdutoGood extends Activity {
 
 
     public void chamaOuroGood(View v) {
+        Singleton.getInstance().setIdProduto(277);
         Intent it = new Intent(ProdutoGood.this, Tabelagrid.class);
         startActivity(it);
     }
     public void chamaPrataGood(View v) {
+        Singleton.getInstance().setIdProduto(278);
         Intent it = new Intent(ProdutoGood.this, Tabelagrid.class);
         startActivity(it);
     }
     public void chamaPlatinaGood(View v) {
+        Singleton.getInstance().setIdProduto(280);
         Intent it = new Intent(ProdutoGood.this, Tabelagrid.class);
         startActivity(it);
     }
     public void chamaBronzeGood(View v) {
+        Singleton.getInstance().setIdProduto(279);
         Intent it = new Intent(ProdutoGood.this, Tabelagrid.class);
         startActivity(it);
     }

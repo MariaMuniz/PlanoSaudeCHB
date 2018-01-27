@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import Entidades.Singleton;
+
 /**
  * Created by Maria Aparecida on 06/01/2018.
  */
@@ -20,12 +22,14 @@ public class Variasempresas extends Activity {
 
 
     public void chamaEmpresa(View v) {
+        Singleton.getInstance().setIdPlano(6);
         Intent it = new Intent(Variasempresas.this, Empresa.class);
         startActivity(it);
     }
 
 
     public void chamaEmpresaplus(View v) {
+        Singleton.getInstance().setIdPlano(7);
         Intent it = new Intent(Variasempresas.this, Empresaplus.class);
         startActivity(it);
     }
