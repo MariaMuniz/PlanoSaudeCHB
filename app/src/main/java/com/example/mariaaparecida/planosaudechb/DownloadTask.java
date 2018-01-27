@@ -211,7 +211,7 @@ public     class DownloadTask extends AsyncTask<String, Void, String> {
                 int idPlano=json_data.getInt("Produto_Operadora_Plano_idPlano");
                 int idIdades=json_data.getInt("Produto_Operadora_Idades_idIdades");
 
-                Log.d("log_tag","id = "+id+" val = "+valor);
+                Log.d("log_tag","id = "+id+" val = "+valor + " idProd = "+idProd);
 
                 Preco p = new Preco(id,valor,idPlano,idOp,idProd,idIdades);
                 saveDao(dao,p);

@@ -39,6 +39,7 @@ import Entidades.Plano;
 import Entidades.Preco;
 import Entidades.Produto;
 import Entidades.RedeCredenciada;
+import Entidades.Singleton;
 
 
 public class MainActivity extends AppCompatActivity
@@ -198,6 +199,7 @@ public class MainActivity extends AppCompatActivity
 
         limparTudo();
         download();
+        //recuperar();
     }
 
 
@@ -236,6 +238,8 @@ public class MainActivity extends AppCompatActivity
         List<Plano> planos = dao.recuperarTodos();
         dao.fecharConexao();
 
+
+
         dao = new OperadoraDAO(this);
         List<Operadora> operadoras = dao.recuperarTodos();
         dao.fecharConexao();
@@ -245,7 +249,15 @@ public class MainActivity extends AppCompatActivity
         dao.fecharConexao();
 
         dao = new PrecoDAO(this);
-        List<Preco> precos = dao.recuperarTodos();
+        //List<Preco> precos = dao.recuperarTodos();
+        List<Preco> precos = dao.recuperarPorQuery("SELECT * FROM  preco where id<14");
+
+        for(Preco r : precos)
+        {
+            Log.d("log_tag","P = "+r.toString());
+        }
+
+
         dao.fecharConexao();
 
         dao = new IdadesDAO(this);

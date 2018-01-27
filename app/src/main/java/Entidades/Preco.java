@@ -75,7 +75,7 @@ package Entidades;
 
         @Override
         public String toString() {
-            return  " Id: "+id +" valor: " + valor +  "idPlano:" + idPlano + " idOperadora:" + idOperadora + " idProduto:" + idProduto;
+            return  " Id: "+id +" valor: " + valor +  " idPlano:" + idPlano + " idOperadora:" + idOperadora + " idProduto:" + idProduto + " idIdades "+idIdades;
         }
 
 
