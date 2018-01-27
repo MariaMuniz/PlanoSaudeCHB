@@ -122,14 +122,7 @@
             android:textSize="90sp"
 
             />
-
-
    </RelativeLayout>
-
-
-
-
-
 
 <LinearLayout
 android:layout_weight="1"

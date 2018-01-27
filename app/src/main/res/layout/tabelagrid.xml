@@ -138,12 +138,11 @@
         </android.support.v7.widget.CardView>
 
 
-        <!--linha2-->
+        <!--linha2comecavalor-->
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-
             android:layout_rowWeight="1"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
@@ -174,7 +173,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-
             android:layout_rowWeight="1"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
@@ -185,6 +183,7 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/edtvalor1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -211,6 +210,7 @@
                 android:orientation="vertical">
 
                 <EditText
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -239,6 +239,7 @@
 
 
                 <EditText
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -255,7 +256,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-
             android:layout_rowWeight="1"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
@@ -286,7 +286,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-
             android:layout_rowWeight="1"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
@@ -298,6 +297,7 @@
 
 
                 <EditText
+                    android:id="@+id/edtvalor2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -352,6 +352,7 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/edtvalor3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -398,7 +399,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-
             android:layout_rowWeight="1"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
@@ -409,6 +409,7 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/edtvalor0"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -521,6 +522,7 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/edtvalor4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -635,6 +637,7 @@
 
 
                 <EditText
+                    android:id="@+id/edtvalor5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -704,7 +707,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-
             android:layout_rowWeight="1"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
@@ -747,6 +749,7 @@
 
 
                 <EditText
+                    android:id="@+id/edtvalor6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -859,6 +862,7 @@
 
 
                 <EditText
+                    android:id="@+id/edtvalor7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -973,6 +977,7 @@
 
 
                 <EditText
+                    android:id="@+id/edtvalor8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -1043,7 +1048,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-
             android:layout_rowWeight="1"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
@@ -1074,7 +1078,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-
             android:layout_rowWeight="1"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
@@ -1086,6 +1089,7 @@
 
 
                 <EditText
+                    android:id="@+id/edtvalor9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -1150,12 +1154,12 @@
 
 
         </android.support.v7.widget.CardView>
+
         <!--linha 11 -->
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-
             android:layout_rowWeight="1"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
@@ -1180,13 +1184,11 @@
 
         </android.support.v7.widget.CardView>
 
-
         <!--2-->
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-
             android:layout_rowWeight="1"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
@@ -1198,6 +1200,7 @@
 
 
                 <EditText
+                    android:id="@+id/edtvalor10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"

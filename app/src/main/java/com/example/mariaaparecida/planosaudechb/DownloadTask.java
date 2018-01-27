@@ -339,7 +339,7 @@ public     class DownloadTask extends AsyncTask<String, Void, String> {
         nameValuePairs.add(new BasicNameValuePair("message",""+tabela));
         try{
             HttpClient httpclient = new DefaultHttpClient();
-                HttpPost httppost = new HttpPost("http://192.168.1.11:80/zprojetos/ChbSaudePhp/dadosTabela.php");
+                HttpPost httppost = new HttpPost("http://192.168.0.6:80/CHBSAUDE/dadosTabela.php");
             //HttpPost httppost = new HttpPost("http://semapensinomilitar.com.br/private/incontroll/conexaomysqlretrievedata.php");
             Log.d("log_tag", "chegou aki0 ");
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
