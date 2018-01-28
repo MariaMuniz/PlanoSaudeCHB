@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.RadioButton;
+
+import Entidades.Singleton;
 
 /**
  * Created by Maria Aparecida on 22/01/2018.
@@ -16,6 +19,24 @@ public class ProdutoUnimedEmpresaPlus extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.produtouminedempresaplus);
+    }
+    public void onRadioButtonClicked(View view) {
+        String acomodacao = "";
+        boolean checked = ((RadioButton) view).isChecked();
+        switch(view.getId()) {
+            case R.id.apt:
+                if (checked){
+                    Singleton.getInstance().setAcomodacao("Apartamento");
+                }
+
+                break;
+            case R.id.enf:
+                if (checked){
+                    Singleton.getInstance().setAcomodacao("Enfermaria");;
+                }
+
+                break;
+        }
     }
 
     public void chamaUnipartFlex30plus(View v) {

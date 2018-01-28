@@ -20,7 +20,7 @@ package Entidades;
             this.valor = valor;
             this.idPlano = idPlano;
             this.idOperadora = idOperadora;
-            this.idOperadora = idProduto;
+            this.idProduto = idProduto;
             this.idIdades = idIdades;
 
         }

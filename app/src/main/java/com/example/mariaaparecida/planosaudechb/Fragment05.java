@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+import Entidades.Singleton;
+
 
 public class Fragment05 extends Fragment implements View.OnClickListener {
     public ArrayAdapter<String> LTRadapter2;
@@ -54,18 +56,24 @@ public class Fragment05 extends Fragment implements View.OnClickListener {
 
         switch (v.getId()) {
             case R.id.individual:
+                Singleton.getInstance().setIdPlano(8);
                 it = new Intent(activity, Individual.class);
                 break;
             case R.id.laboratorial:
+                //AMBULATORIAL NE???
+                Singleton.getInstance().setIdPlano(5);
                 it = new Intent(activity, Laboratorial.class);
                 break;
             case R.id.variasempresas:
+                //Na proxima tela que eh escolhido se eh o plano empresarial 1 id = 6 ou o 2 que id = 7 entao setId eh feito em Variasempresas.class
                 it = new Intent(activity, Variasempresas.class);
                 break;
             case R.id.adesao:
+                //Na proxima tela que eh escolhido se eh o plano adesao aflix,allcare,bem ou qualicorp entao eh setado na tela Adesao.class
                 it = new Intent(activity, Adesao.class);
                 break;
             case R.id.odonto:
+                Singleton.getInstance().setIdPlano(9);
                 it = new Intent(activity, Odontologico.class);
                 break;
             case R.id.informacoes:

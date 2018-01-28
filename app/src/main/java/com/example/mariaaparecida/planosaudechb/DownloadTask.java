@@ -93,6 +93,8 @@ public     class DownloadTask extends AsyncTask<String, Void, String> {
                 HasRedeCredenciada p = new HasRedeCredenciada(id,idRede,idPlano,idPlano1,idIdades);
                 saveDao(dao,p);
 
+                Log.d("log_tag2","ophas = "+p.toString());
+
             }
             dao.fecharConexao();
 
@@ -123,6 +125,8 @@ public     class DownloadTask extends AsyncTask<String, Void, String> {
                 Log.d("log_tag","id = "+id+" nome = "+nome);
                 RedeCredenciada p = new RedeCredenciada(id,nome,cidade);
                 saveDao(dao,p);
+
+                Log.d("log_tag2","rede = "+p.toString());
 
             }
             dao.fecharConexao();
@@ -156,6 +160,8 @@ public     class DownloadTask extends AsyncTask<String, Void, String> {
                 Faixaetaria p = new Faixaetaria(id,idIdade,inicial,fim);
                 saveDao(dao,p);
 
+                Log.d("log_tag2","faixa = "+p.toString());
+
             }
             dao.fecharConexao();
 
@@ -181,6 +187,8 @@ public     class DownloadTask extends AsyncTask<String, Void, String> {
 
                 Idades p = new Idades(id);
                 saveDao(dao,p);
+
+                Log.d("log_tag2","idades = "+p.toString());
 
                 Log.d("log_tag","id = "+id);
             }
@@ -214,6 +222,8 @@ public     class DownloadTask extends AsyncTask<String, Void, String> {
                 Log.d("log_tag","id = "+id+" val = "+valor + " idProd = "+idProd);
 
                 Preco p = new Preco(id,valor,idPlano,idOp,idProd,idIdades);
+
+                Log.d("log_tag2","preco = "+p.toString());
                 saveDao(dao,p);
             }
             dao.fecharConexao();
@@ -248,6 +258,8 @@ public     class DownloadTask extends AsyncTask<String, Void, String> {
                 Produto p = new Produto(id,nome,idOp,idPlano,idIdades);
                 saveDao(dao,p);
 
+                Log.d("log_tag2","produto = "+p.toString());
+
             }
             dao.fecharConexao();
 
@@ -279,6 +291,8 @@ public     class DownloadTask extends AsyncTask<String, Void, String> {
                 Plano p = new Plano(id,nome);
                 saveDao(dao,p);
 
+                Log.d("log_tag2","plano = "+p.toString());
+
             }
             dao.fecharConexao();
 
@@ -309,6 +323,8 @@ public     class DownloadTask extends AsyncTask<String, Void, String> {
 
                 Operadora p = new Operadora(id,nome,idPlano,idIdades);
                 saveDao(dao,p);
+
+                Log.d("log_tag2","operadora = "+p.toString());
             }
             dao.fecharConexao();
 
@@ -339,7 +355,17 @@ public     class DownloadTask extends AsyncTask<String, Void, String> {
         nameValuePairs.add(new BasicNameValuePair("message",""+tabela));
         try{
             HttpClient httpclient = new DefaultHttpClient();
-                HttpPost httppost = new HttpPost("http://192.168.0.6:80/CHBSAUDE/dadosTabela.php");
+                HttpPost httppost;
+            boolean alexsander = false;
+            if(alexsander)
+            {
+                httppost = new HttpPost("http://192.168.1.11:80/zprojetos/ChbSaudePhp/dadosTabela.php");
+            }
+            else{
+                httppost = new HttpPost("http://192.168.0.6:80/CHBSAUDE/dadosTabela.php");
+            }
+
+
             //HttpPost httppost = new HttpPost("http://semapensinomilitar.com.br/private/incontroll/conexaomysqlretrievedata.php");
             Log.d("log_tag", "chegou aki0 ");
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
