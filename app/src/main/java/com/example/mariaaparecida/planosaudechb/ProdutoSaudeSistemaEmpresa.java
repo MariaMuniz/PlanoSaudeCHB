@@ -40,7 +40,7 @@ public class ProdutoSaudeSistemaEmpresa extends Activity {
                 break;
         }
     }
-
+/*
     public void onButtonClicked(View view) {
 
         boolean checked = ((RadioButton) view).isChecked();
@@ -59,22 +59,25 @@ public class ProdutoSaudeSistemaEmpresa extends Activity {
                 break;
         }
     }
-
-
+*/
     public void chamaEssencialPrimeEmpresa(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,199,200);
         Intent it = new Intent(ProdutoSaudeSistemaEmpresa.this, Tabelagrid.class);
         startActivity(it);
     }
     public void chamaClassico180Empresa(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,193,194);
         Intent it = new Intent(ProdutoSaudeSistemaEmpresa.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaClassico200Empresa(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,195,196);
         Intent it = new Intent(ProdutoSaudeSistemaEmpresa.this, Tabelagrid.class);
         startActivity(it);
     }
     public void chamaMasterEmpresa(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,197,198);
         Intent it = new Intent(ProdutoSaudeSistemaEmpresa.this, Tabelagrid.class);
         startActivity(it);
     }

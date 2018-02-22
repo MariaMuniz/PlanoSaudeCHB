@@ -62,19 +62,23 @@ public class ProdutoSaudeSistemaEmpresaPlus extends Activity {
 
 
     public void chamaEssencialPrimeEmpresaplus(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,263,264);
         Intent it = new Intent(ProdutoSaudeSistemaEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
     public void chamaClassico180Empresaplus(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,259,260);
         Intent it = new Intent(ProdutoSaudeSistemaEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaClassico200Empresaplus(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,261,262);
         Intent it = new Intent(ProdutoSaudeSistemaEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
     public void chamaMasterEmpresaplus(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,265,266);
         Intent it = new Intent(ProdutoSaudeSistemaEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }

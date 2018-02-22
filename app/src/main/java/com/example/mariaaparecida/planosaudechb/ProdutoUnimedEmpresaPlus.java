@@ -40,31 +40,37 @@ public class ProdutoUnimedEmpresaPlus extends Activity {
     }
 
     public void chamaUnipartFlex30plus(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,273,274);
         Intent it = new Intent(ProdutoUnimedEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaUnipartFlex50plus(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,275,276);
         Intent it = new Intent(ProdutoUnimedEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
     public void chamaUnifacilFlex30plus(View v) {
+        Singleton.getInstance().setIdProduto(269);
         Intent it = new Intent(ProdutoUnimedEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaUnifacilFlex50plus(View v) {
+        Singleton.getInstance().setIdProduto(270);
         Intent it = new Intent(ProdutoUnimedEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
 
 
     public void chamaUnimaxplus(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,271,272);
         Intent it = new Intent(ProdutoUnimedEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaPlenoUnimedEmpresaplus(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,268,267);
         Intent it = new Intent(ProdutoUnimedEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }

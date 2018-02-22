@@ -62,15 +62,18 @@ public class ProdutoPromedEmprsaPlus extends Activity {
 
 
     public void chamaConfortPromedEmpresaplus(View v) {
-        Intent it = new Intent(ProdutoPromedEmprsaPlus.this, Tabelagrid.class);
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,257,258);
+        Intent it = new Intent(ProdutoPromedEmprsaPlus.this, TabelaPromed.class);
         startActivity(it);
     }
     public void chamaSelectPromedEmpresaplus(View v) {
-        Intent it = new Intent(ProdutoPromedEmprsaPlus.this, Tabelagrid.class);
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,253,254);
+        Intent it = new Intent(ProdutoPromedEmprsaPlus.this, TabelaPromed.class);
         startActivity(it);
     }
     public void chamaLifePromedEmpresaplus(View v) {
-        Intent it = new Intent(ProdutoPromedEmprsaPlus.this, Tabelagrid.class);
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,255,256);
+        Intent it = new Intent(ProdutoPromedEmprsaPlus.this, TabelaPromed.class);
         startActivity(it);
     }
 }

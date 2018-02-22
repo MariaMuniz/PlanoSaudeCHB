@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -20,6 +22,7 @@
             android:layout_marginLeft="35dp"/>
 
         <EditText
+            android:id="@+id/edtnomeplano"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -46,6 +49,7 @@
             android:layout_marginLeft="35dp"/>
 
         <EditText
+            android:id="@+id/edtnomeproduto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -88,17 +92,13 @@
         android:layout_height="0dp"
         >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="95,00"
-
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="90sp"
-
-            />
-
+        <EditText
+            android:id="@+id/edtprecodonto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="number">
+        </EditText>
 
     </RelativeLayout>
 
@@ -121,6 +121,7 @@
             />
 
         <EditText
+            android:id="@+id/edtpagamento"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"

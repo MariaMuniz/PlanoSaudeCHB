@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.RadioButton;
+
+import Entidades.Singleton;
 
 /**
  * Created by Maria Aparecida on 23/01/2018.
@@ -18,25 +21,54 @@ public class ProdutoBradescoAlcare extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.produtobradescoalcare);
     }
-    public void chamaTopPlus3Alcare(View v) {
+
+    public void onRadioButtonClicked(View view) {
+        String acomodacao = "";
+        boolean checked = ((RadioButton) view).isChecked();
+        switch(view.getId()) {
+            case R.id.apt:
+                if (checked){
+                    Singleton.getInstance().setAcomodacao("Apartamento");
+                }
+
+                break;
+            case R.id.enf:
+                if (checked){
+                    Singleton.getInstance().setAcomodacao("Enfermaria");;
+                }
+
+                break;
+        }
+    }
+
+
+    public void chamaTopNacionalAlcare(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,13,14);
         Intent it = new Intent(ProdutoBradescoAlcare.this, Tabelagrid.class);
         startActivity(it);
     }
 
-    public void chamaTopPlus2Alcare(View v) {
+    public void chamaNacionalFlexAlcareAd(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,11,12);
         Intent it = new Intent(ProdutoBradescoAlcare.this, Tabelagrid.class);
         startActivity(it);
     }
-    public void chamaTopPlus1Alcare(View v) {
+
+    public void chamaTopPlus3Alcare(View v) {
+        Singleton.getInstance().setIdProduto(15);
         Intent it = new Intent(ProdutoBradescoAlcare.this, Tabelagrid.class);
         startActivity(it);
     }
-    public void chamaNacionalFlexAlcare(View v) {
+
+    public void chamaTopPlus4Alcare(View v) {
+        Singleton.getInstance().setIdProduto(16);
         Intent it = new Intent(ProdutoBradescoAlcare.this, Tabelagrid.class);
         startActivity(it);
     }
-    public void chamaTopNacionalAlcare(View v) {
+    public void chamaTopPlus6Alcare(View v) {
+        Singleton.getInstance().setIdProduto(17);
         Intent it = new Intent(ProdutoBradescoAlcare.this, Tabelagrid.class);
         startActivity(it);
     }
+
 }

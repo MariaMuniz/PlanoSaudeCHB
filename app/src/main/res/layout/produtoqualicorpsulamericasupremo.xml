@@ -49,14 +49,14 @@
             android:layout_marginLeft="30dp"
 
             android:orientation="vertical">
-            <RadioButton android:id="@+id/radio_pirates"
+            <RadioButton android:id="@+id/apt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_blue_dark"
                 android:text="Apartamento"
                 android:buttonTint="@android:color/holo_blue_dark"
                 android:onClick="onRadioButtonClicked"/>
-            <RadioButton android:id="@+id/radio_ninjas"
+            <RadioButton android:id="@+id/enf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Enfermaria"
@@ -121,7 +121,7 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10.08"
+        android:layout_weight="14.25"
         android:alignmentMode="alignMargins"
         android:columnCount="2"
         android:columnOrderPreserved="false"
@@ -165,7 +165,7 @@
             </LinearLayout>
 
 
-            >
+
         </android.support.v7.widget.CardView>
         <!--column3 individ -->
         <android.support.v7.widget.CardView
@@ -203,43 +203,151 @@
 
             >
         </android.support.v7.widget.CardView>
-        <!--column4 individ -->
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
+        >
 
-            <LinearLayout
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_rowWeight="1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
+                android:clickable="true"
+                android:onClick="chamaEspecialcem1SulamericaSupremo"
+                android:text="Especial 101"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp"
+
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <!--column5 individ -->
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_rowWeight="1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
 
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:onClick="chamaExecutivoSulamericaSupremo"
-                    android:text="Executivo"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/holo_blue_dark"
-                    android:textSize="18sp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="chamaEspecialcem2SulamericaSupremo"
+                android:text="Especial 102"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp"
 
-                    />
-            </LinearLayout>
-
-
-            >
-        </android.support.v7.widget.CardView>
+                />
+        </LinearLayout>
 
 
-    </GridLayout>
+        >
+    </android.support.v7.widget.CardView>
+    <!--column4 individ -->
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_rowWeight="1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="chamaExecutivo1SulamericaSupremo"
+                android:text="Executivo I"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp"
+
+                />
+        </LinearLayout>
+
+
+        >
+    </android.support.v7.widget.CardView>
+    <!--column5 individ -->
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_rowWeight="1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="chamaExecutivo2SulamericaSupremo"
+                android:text="Executivo II"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp"
+
+                />
+        </LinearLayout>
+
+
+        >
+    </android.support.v7.widget.CardView>
+
+
+
+</GridLayout>
 </LinearLayout>

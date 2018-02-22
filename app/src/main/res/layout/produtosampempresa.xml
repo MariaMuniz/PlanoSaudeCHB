@@ -22,6 +22,35 @@
     </RelativeLayout>
 
 
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/apt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark"
+                android:text="Apartamento"
+                android:buttonTint="@android:color/holo_blue_dark"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/enf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enfermaria"
+                android:buttonTint="@android:color/holo_blue_dark"
+                android:textColor="@android:color/holo_blue_dark"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+    </RelativeLayout>
 
 
 
@@ -33,7 +62,7 @@
         android:columnOrderPreserved="false"
         android:padding="14dp"
         android:rowCount="8"
-        android:layout_weight="8.12">
+        android:layout_weight="6.40">
 
 
         <!--column1 individ -->

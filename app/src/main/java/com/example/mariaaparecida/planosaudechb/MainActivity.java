@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity
 
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
 
-        fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.mariaaparecida.planosaudechb.Fragment01()).commit();
+        fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.mariaaparecida.planosaudechb.Fragment05()).commit();
 
 
         navigationView.getMenu().getItem(0).setChecked(true);

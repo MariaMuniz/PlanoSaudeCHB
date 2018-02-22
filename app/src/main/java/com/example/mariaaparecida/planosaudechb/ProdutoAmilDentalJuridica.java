@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import Entidades.Singleton;
+
 /**
  * Created by Maria Aparecida on 24/01/2018.
  */
@@ -19,10 +21,12 @@ public class ProdutoAmilDentalJuridica  extends Activity {
     }
 
     public void chamaPorteum(View v) {
+        Singleton.getInstance().setIdProduto(294);
         Intent it = new Intent(ProdutoAmilDentalJuridica.this, PrecoOdonto.class);
         startActivity(it);
     }
     public void chamaPortedois(View v) {
+        Singleton.getInstance().setIdProduto(295);
         Intent it = new Intent(ProdutoAmilDentalJuridica.this, PrecoOdonto.class);
         startActivity(it);
     }

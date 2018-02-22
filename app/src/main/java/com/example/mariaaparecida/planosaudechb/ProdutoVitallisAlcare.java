@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import Entidades.Singleton;
+
 /**
  * Created by Maria Aparecida on 23/01/2018.
  */
@@ -19,10 +21,12 @@ public class ProdutoVitallisAlcare extends Activity {
     }
 
     public void chamaEssencilaptAlcare(View v) {
+        Singleton.getInstance().setIdProduto(25);
         Intent it = new Intent(ProdutoVitallisAlcare.this, Tabelagrid.class);
         startActivity(it);
     }
     public void chamaEssencialenfAlcare(View v) {
+        Singleton.getInstance().setIdProduto(24);
         Intent it = new Intent(ProdutoVitallisAlcare.this, Tabelagrid.class);
         startActivity(it);
     }

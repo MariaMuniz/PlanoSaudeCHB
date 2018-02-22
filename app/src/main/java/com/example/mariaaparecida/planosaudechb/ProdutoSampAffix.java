@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import Entidades.Singleton;
+
 /**
  * Created by Maria Aparecida on 22/01/2018.
  */
@@ -19,10 +21,12 @@ public class ProdutoSampAffix extends Activity {
     }
 
     public void chamaIdealPlusAffix(View v) {
+        Singleton.getInstance().setIdProduto(2);
         Intent it = new Intent(ProdutoSampAffix.this, Tabelagrid.class);
         startActivity(it);
     }
     public void chamaIdealAffix(View v) {
+        Singleton.getInstance().setIdProduto(1);
         Intent it = new Intent(ProdutoSampAffix.this, Tabelagrid.class);
         startActivity(it);
     }

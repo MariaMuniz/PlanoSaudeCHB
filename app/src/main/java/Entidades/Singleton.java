@@ -74,7 +74,7 @@ public class Singleton {
         }
         else if(Singleton.getInstance().getAcomodacao().equals("Apartamento"))
         {
-            Singleton.getInstance().setIdProduto(idEnfermaria);
+            Singleton.getInstance().setIdProduto(idApartamento);
         }
         else{
             toastMeu(context);

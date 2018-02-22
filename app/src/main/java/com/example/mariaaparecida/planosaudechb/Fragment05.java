@@ -23,7 +23,7 @@ public class Fragment05 extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         activity = this.getActivity();
-        getActivity().setTitle("Simulador");
+        getActivity().setTitle("Preços");
         final View v = inflater.inflate(R.layout.fragment_fragment05, container, false);
 
 

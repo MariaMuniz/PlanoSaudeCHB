@@ -8,7 +8,7 @@
 
 
     <RelativeLayout
-        android:layout_weight="6"
+        android:layout_weight="9"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         >
@@ -61,7 +61,7 @@
                     android:text="Stone"
                     android:clickable="true"
                     android:onClick="chamaStoneAmb"
-                    android:id="@+id/ouropremium"
+                    android:id="@+id/ouropremium3"
                     android:textAlignment="center"
                     android:textColor="@android:color/holo_blue_dark"
                     android:textSize="18sp"
@@ -94,8 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"
-                    android:onClick="chamaPrataPremiumAmb"
-                    android:id="@+id/pratapremium"
+                    android:id="@+id/pratapremium3"
                     android:text="Nao"
                     android:textAlignment="center"
                     android:textColor="@android:color/holo_blue_dark"

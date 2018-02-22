@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import Entidades.Singleton;
+
 /**
  * Created by Maria Aparecida on 22/01/2018.
  */
@@ -18,6 +20,7 @@ public class ProdutoAmbulatorialGood extends Activity {
     }
 
     public void chamaStoneAmb(View v) {
+        Singleton.getInstance().setIdProduto(146);
         Intent it = new Intent(ProdutoAmbulatorialGood.this, Tabelagrid.class);
         startActivity(it);
     }

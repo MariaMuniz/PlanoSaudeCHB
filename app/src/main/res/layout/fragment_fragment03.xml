@@ -4,135 +4,213 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:weightSum="14"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="left|top"
-        android:weightSum="1">
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <RelativeLayout
+            android:layout_weight="4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lnlPlano">
-
+            android:layout_height="0dp"
+            >
             <TextView
+                android:id="@+id/textGrid"
+                android:text="Escolha um plano"
+                android:textSize="34sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecione o plano:"
-                android:id="@+id/textView" />
+                android:layout_height="wrap_content" />
 
-            <Spinner
-                android:layout_width="211dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/spnPlano"
-                android:layout_gravity="right" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
-            android:orientation="horizontal"
+
+        <GridLayout
+            android:columnCount="2"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_weight="8"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.06"
-            android:weightSum="1"
-            android:id="@+id/lnlOperadora">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecione a operadora"
-                android:id="@+id/textView3" />
-
-            <Spinner
-                android:layout_width="136dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/spnOperadora"
-                android:layout_weight="0.75" />
-
-        </LinearLayout>
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" >
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:layout_height="match_parent">
+            android:layout_height="0dp"
+            android:padding="14dp">
 
 
+            <!--column1 individ -->
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp">
 
-                <ImageView
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView" />
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
-                <ImageView
+                    <ImageView
+                        android:id="@+id/redecredenciadaindividual"
+                        android:src="@drawable/individualdesativado"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"  />
+
+                    <TextView
+                        android:text="Individual"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+
+
+
+                ></android.support.v7.widget.CardView>
+
+            <!--column2 empresarial-->
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView2" />
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
-                <ImageView
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/redecredenciadaempresa"
+                        android:src="@drawable/empresariodesativado"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"  />
+
+                    <TextView
+                        android:text="Empresarial"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+
+
+
+                ></android.support.v7.widget.CardView>
+
+
+
+            <!--column3 adesao-->
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView3" />
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
-                <ImageView
+                    <ImageView
+                        android:id="@+id/redecredenciadaadesao"
+                        android:src="@drawable/adesadesativado"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"  />
+
+                    <TextView
+                        android:text="Adesão"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+
+
+
+                ></android.support.v7.widget.CardView>
+
+
+            <!--column4 laborat -->
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView4" />
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView5" />
+                    <ImageView
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView6" />
+                        android:id="@+id/redecredenciadalaboratorial"
+                        android:src="@drawable/laboratorialdesativado"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"  />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView7" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView8" />
+                    <TextView
+                        android:text="Laboratorial"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView9" />
+                        />
+                </LinearLayout>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView10" />
+                ></android.support.v7.widget.CardView>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView11" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView12" />
-
-
-            </LinearLayout>
-        </ScrollView>
-
+        </GridLayout>
 
     </LinearLayout>
-
-
 
 </FrameLayout>

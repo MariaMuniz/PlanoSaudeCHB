@@ -62,16 +62,20 @@ public class ProdutoQualicorpAmilPremium extends Activity {
 
 
     public void chamaAmil400Premium(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,30,31);
+       // Singleton.getInstance().escolheIdCooparticipacaoOuIdNormal(this,285,284);
         Intent it = new Intent(ProdutoQualicorpAmilPremium.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaAmil500Premium(View v) {
+        Singleton.getInstance().setIdProduto(32);
         Intent it = new Intent(ProdutoQualicorpAmilPremium.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaAmil700Premium(View v) {
+        Singleton.getInstance().setIdProduto(33);
         Intent it = new Intent(ProdutoQualicorpAmilPremium.this, Tabelagrid.class);
         startActivity(it);
     }

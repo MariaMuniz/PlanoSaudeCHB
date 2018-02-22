@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import Entidades.Singleton;
+
 /**
  * Created by Maria Aparecida on 24/01/2018.
  */
@@ -19,10 +21,12 @@ public class ProdutoAmilDentalFisica  extends Activity {
     }
 
     public void chamaCartaoAmil(View v) {
+        Singleton.getInstance().setIdProduto(296);
         Intent it = new Intent(ProdutoAmilDentalFisica.this, PrecoOdonto.class);
         startActivity(it);
     }
     public void chamaBoletoAmil(View v) {
+        Singleton.getInstance().setIdProduto(297);
         Intent it = new Intent(ProdutoAmilDentalFisica.this, PrecoOdonto.class);
         startActivity(it);
     }

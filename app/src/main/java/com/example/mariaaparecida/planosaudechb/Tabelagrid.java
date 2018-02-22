@@ -65,11 +65,6 @@ public class Tabelagrid extends Activity {
         setContentView(R.layout.tabelagrid);
 
 
-
-
-
-
-
         edtvalor1 = (EditText)findViewById(R.id.edtPreco1);
         edtvalor2 = (EditText)findViewById(R.id.edtPreco2);
         edtvalor3 = (EditText)findViewById(R.id.edtPreco3);

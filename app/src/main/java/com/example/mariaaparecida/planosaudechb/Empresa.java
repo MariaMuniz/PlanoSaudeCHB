@@ -20,10 +20,6 @@ public class Empresa extends Activity {
         setContentView(R.layout.empresa1);
     }
 
-
-
-
-
     public void chamaOneHealtEmpresa(View v) {
         Singleton.getInstance().setIdOperadora(19);
         Intent it = new Intent(Empresa.this,ProdutoOnehealtEmpresas.class);

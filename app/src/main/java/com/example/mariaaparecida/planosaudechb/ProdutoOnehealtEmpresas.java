@@ -23,26 +23,6 @@ public class ProdutoOnehealtEmpresas extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.produtosonehealtempresas);
     }
-
-    public void onRadioButtonClicked(View view) {
-        String acomodacao = "";
-        boolean checked = ((RadioButton) view).isChecked();
-        switch(view.getId()) {
-            case R.id.apt:
-                if (checked){
-                    Singleton.getInstance().setAcomodacao("Apartamento");
-                }
-
-                break;
-            case R.id.enf:
-                if (checked){
-                    Singleton.getInstance().setAcomodacao("Enfermaria");;
-                }
-
-                break;
-        }
-    }
-
     public void onButtonClicked(View view) {
 
         boolean checked = ((RadioButton) view).isChecked();
@@ -61,8 +41,6 @@ public class ProdutoOnehealtEmpresas extends Activity {
                 break;
         }
     }
-
-
 
     public void chamaLincxlt4(View v) {
         Singleton.getInstance().escolheIdCooparticipacaoOuIdNormal(this,164,170);

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:weightSum="24"
+    android:weightSum="14"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
     <RelativeLayout
-        android:layout_weight="4"
+        android:layout_weight="5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         >
@@ -29,7 +29,7 @@
         android:rowCount="3"
         android:alignmentMode="alignMargins"
         android:columnOrderPreserved="false"
-        android:layout_weight="8"
+        android:layout_weight="7.07"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="14dp">
@@ -55,8 +55,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:src="@drawable/premium"
-                    android:onClick="chamaPremiumAmb"
+                    android:src="@drawable/premiumind"
+                    android:onClick="chamaPremiumAmbulatorialIndividual"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
@@ -70,6 +70,75 @@
             ></android.support.v7.widget.CardView>
 
 
+        <!--column1-->
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:src="@drawable/premiumempresarial"
+                    android:onClick="chamaPremiumEmpresarialAmb"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"  />
+
+
+            </LinearLayout>
+
+
+
+
+            ></android.support.v7.widget.CardView>
+
+        <!--column2-->
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:src="@drawable/goodlifeamb"
+                    android:onClick="chamaProdutoAmbulatorialGood"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"  />
+
+
+
+            </LinearLayout>
+
+
+
+
+            ></android.support.v7.widget.CardView>
 
         <!--column2-->
         <android.support.v7.widget.CardView
@@ -91,16 +160,11 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:src="@drawable/goodlife"
-                    android:onClick="chamaGoodlifeAmb"
+                    android:src="@drawable/promed"
+                    android:onClick="chamaProdutoAmbPromed"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"  />
-
-
-
-
-
 
             </LinearLayout>
 
@@ -108,6 +172,7 @@
 
 
             ></android.support.v7.widget.CardView>
+
 
 
 

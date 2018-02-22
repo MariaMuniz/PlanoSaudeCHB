@@ -40,13 +40,14 @@ public class ProdutoVitallisEmpresa extends Activity {
                 break;
         }
     }
-
     public void chamaGlobalVitallisEmpresa(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,214,212);
         Intent it = new Intent(ProdutoVitallisEmpresa.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaPlatinaVitallisEmpesa(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,213,211);
         Intent it = new Intent(ProdutoVitallisEmpresa.this, Tabelagrid.class);
         startActivity(it);
     }

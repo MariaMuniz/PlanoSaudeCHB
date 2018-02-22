@@ -60,22 +60,26 @@ public class ProdutosAmil extends Activity {
     }
 
     public void chamaAmil200(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,153,154);
         Intent it = new Intent(ProdutosAmil.this, Tabelagrid.class);
         startActivity(it);
     }
 
 
     public void chamaAmil400(View v) {
+        Singleton.getInstance().escolheIdApartamentoOuIdEnfermaria(this,155,156);
         Intent it = new Intent(ProdutosAmil.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaAmil500(View v) {
+        Singleton.getInstance().setIdProduto(157);
         Intent it = new Intent(ProdutosAmil.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaAmil700(View v) {
+        Singleton.getInstance().setIdProduto(158);
         Intent it = new Intent(ProdutosAmil.this, Tabelagrid.class);
         startActivity(it);
     }

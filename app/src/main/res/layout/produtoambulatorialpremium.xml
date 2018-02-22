@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_weight="4"
+        android:layout_weight="7"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         >
@@ -59,17 +59,16 @@
                     android:layout_height="wrap_content"
                     android:text="Ouro"
                     android:clickable="true"
-                    android:onClick="chamaOuroPremiumAmb"
-                    android:id="@+id/ouropremium"
+                    android:onClick="chamaOuroPremiumEmpresa"
+                    android:id="@+id/ouropremium5"
                     android:textAlignment="center"
                     android:textColor="@android:color/holo_blue_dark"
-                    android:textSize="18sp"
+                    android:textSize="18sp" />
 
-                    />
             </LinearLayout>
 
 
-            >
+
         </android.support.v7.widget.CardView>
         <!--column2 individ -->
         <android.support.v7.widget.CardView
@@ -95,8 +94,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"
-                    android:onClick="chamaPrataPremiumAmb"
-                    android:id="@+id/pratapremium"
+                    android:onClick="chamaPrataPremiumempresa"
+                    android:id="@+id/pratapremium07"
                     android:text="Prata"
                     android:textAlignment="center"
                     android:textColor="@android:color/holo_blue_dark"
@@ -106,7 +105,7 @@
             </LinearLayout>
 
 
-            >
+
         </android.support.v7.widget.CardView>
         <!--column3 individ -->
         <android.support.v7.widget.CardView
@@ -133,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:onClick="chamaPlatinaPremiumAmb"
-                    android:id="@+id/platinapremium"
+                    android:id="@+id/platinapremium09"
                     android:text="Platina"
                     android:textAlignment="center"
                     android:textColor="@android:color/holo_blue_dark"
@@ -143,7 +142,7 @@
             </LinearLayout>
 
 
-            >
+
         </android.support.v7.widget.CardView>
         <!--column4 individ -->
         <android.support.v7.widget.CardView
@@ -179,7 +178,7 @@
             </LinearLayout>
 
 
-            >
+
         </android.support.v7.widget.CardView>
 
 

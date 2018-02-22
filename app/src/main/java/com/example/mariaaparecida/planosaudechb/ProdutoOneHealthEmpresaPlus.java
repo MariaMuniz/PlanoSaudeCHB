@@ -22,26 +22,6 @@ public class ProdutoOneHealthEmpresaPlus extends Activity {
         setContentView(R.layout.produtoonehealthempresaplus);
     }
 
-
-    public void onRadioButtonClicked(View view) {
-        String acomodacao = "";
-        boolean checked = ((RadioButton) view).isChecked();
-        switch(view.getId()) {
-            case R.id.apt:
-                if (checked){
-                    Singleton.getInstance().setAcomodacao("Apartamento");
-                }
-
-                break;
-            case R.id.enf:
-                if (checked){
-                    Singleton.getInstance().setAcomodacao("Enfermaria");;
-                }
-
-                break;
-        }
-    }
-
     public void onButtonClicked(View view) {
 
         boolean checked = ((RadioButton) view).isChecked();
@@ -62,35 +42,37 @@ public class ProdutoOneHealthEmpresaPlus extends Activity {
     }
 
 
-
-
-
     public void chamaLincxlt4plus(View v) {
+        Singleton.getInstance().escolheIdCooparticipacaoOuIdNormal(this,234,240);
         Intent it = new Intent(ProdutoOneHealthEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaLincxlt3plus(View v) {
+        Singleton.getInstance().escolheIdCooparticipacaoOuIdNormal(this,233,239);
         Intent it = new Intent(ProdutoOneHealthEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaBlackt3plus(View v) {
+        Singleton.getInstance().escolheIdCooparticipacaoOuIdNormal(this,236,242);
         Intent it = new Intent(ProdutoOneHealthEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
 
-
     public void chamaBlackt4plus(View v) {
+        Singleton.getInstance().escolheIdCooparticipacaoOuIdNormal(this,237,245);
         Intent it = new Intent(ProdutoOneHealthEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
     public void chamaBlackt5plus(View v) {
+        Singleton.getInstance().escolheIdCooparticipacaoOuIdNormal(this,238,246);
         Intent it = new Intent(ProdutoOneHealthEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
 
     public void chamaBlackt2plus(View v) {
+        Singleton.getInstance().escolheIdCooparticipacaoOuIdNormal(this,235,241);
         Intent it = new Intent(ProdutoOneHealthEmpresaPlus.this, Tabelagrid.class);
         startActivity(it);
     }
